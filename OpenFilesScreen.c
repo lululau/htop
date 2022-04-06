@@ -119,7 +119,7 @@ static OpenFiles_ProcessData* OpenFilesScreen_getProcessData(pid_t pid) {
       close(fdnull);
       char buffer[32] = {0};
       xSnprintf(buffer, sizeof(buffer), "%d", pid);
-      execlp("lsof", "lsof", "-P", "-o", "-p", buffer, "-F", NULL);
+      execlp("lsof", "lsof", "-P", "-n", "-o", "-p", buffer, "-F", NULL);
       exit(127);
    }
    close(fdpair[1]);

@@ -55,13 +55,13 @@ static HandlerResult ColumnsPanel_eventHandler(Panel* super, int ch) {
          }
          break;
       }
-      case KEY_UP:
-      {
-         if (!this->moving) {
-            break;
-         }
+      case 'k':
+      case KEY_UP: {
+        if (!this->moving) {
+          break;
+        }
       }
-         /* else fallthrough */
+        /* else fallthrough */
       case KEY_F(7):
       case '[':
       case '-':
@@ -71,13 +71,13 @@ static HandlerResult ColumnsPanel_eventHandler(Panel* super, int ch) {
          result = HANDLED;
          break;
       }
-      case KEY_DOWN:
-      {
-         if (!this->moving) {
-            break;
-         }
+      case 'j':
+      case KEY_DOWN: {
+        if (!this->moving) {
+          break;
+        }
       }
-         /* else fallthrough */
+        /* else fallthrough */
       case KEY_F(8):
       case ']':
       case '+':

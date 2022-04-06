@@ -5,6 +5,7 @@ Released under the GNU GPLv2+, see the COPYING file
 in the source distribution for its full text.
 */
 
+#include "Panel.h"
 #include "config.h" // IWYU pragma: keep
 
 #include "Action.h"
@@ -689,7 +690,7 @@ void Action_setBindings(Htop_Action* keys) {
    keys['c'] = actionTagAllChildren;
    keys['e'] = actionShowEnvScreen;
    keys['h'] = actionHelp;
-   keys['k'] = actionKill;
+   keys[KEY_CTRL('K')] = actionKill;
    keys['l'] = actionLsof;
    keys['m'] = actionToggleMergedCommand;
    keys['p'] = actionToggleProgramPath;
